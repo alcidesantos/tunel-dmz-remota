@@ -61,11 +61,13 @@ cd src/dmz
 go build -o tunnel-server
 export TUNNEL_AUTH_TOKEN="tunnel-2026-secure-token"  # ⚠️ Altera para um token forte
 sudo ./tunnel-server  # ou via systemd
-
+```
+### 2️⃣ Remota (Python)
+```
 cd src/remota
 export TUNNEL_AUTH_TOKEN="tunnel-2026-secure-token"  # ⚠️ Mesma string da DMZ
 python3 main.py
-
+```
 ✅ Nota: Ambas as partes usam apenas a stdlib. Sem dependências externas.
 
 🔧 Configuração
