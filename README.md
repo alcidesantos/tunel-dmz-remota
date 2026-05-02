@@ -77,18 +77,21 @@ python3 main.py
 | src/dmz/config.go    | ListenAddress, ServerPort, AuthToken    |IP/porto de escuta, token de auth, portos de proxy |
 | src/remota/config.py | HOST, PORT, AUTH_TOKEN, WEB_SERVER_PORT |IP da DMZ, porto do túnel, destino do proxy HTTP   |
 
-🧪 Validação Imediata
+###🧪 Validação Imediata
 # Testar SSH através do túnel
+```
 ssh utilizador@<DMZ_IP> -p 2222
-
+```
 # Testar HTTP através do túnel
+```
 curl -H "Connection: close" -s http://<DMZ_IP>:8888
-
+```
 # Verificar logs
+```
 journalctl -u tunnel-dmz.service -f  # DMZ
 tail -f ~/projeto-tunel/remota.log   # Remota
-
-🛡️ Segurança & Limitações
+```
+###🛡️ Segurança & Limitações
 🔐 Autenticação: Handshake por token partilhado (MSG_AUTH). Previne ligações não autorizadas e relay abuse.
 🌐 Confidencialidade: O tráfego SSH viaja cifrado nativamente. O HTTP e controlo viajam em texto puro no túnel. Para produção, recomenda-se TLS 1.3 ou migração para mTLS/WireGuard.
 🚧 Escopo Académico: O projeto prioriza resiliência de transporte e gestão de ciclo de vida. A arquitetura está preparada para evolução para Session Broker + Gateway Local (APP_S) conforme descrito no relatório técnico.
