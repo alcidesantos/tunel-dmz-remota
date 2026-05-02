@@ -43,7 +43,7 @@ Auth por Token + Keepalive + Heartbeat Adaptativo
 │ │ ├── config.go
 │ │ ├── webproxy.go
 │ │ └── go.mod
-│ ├── remota/ # Cliente Python (Remota)
+│ └── remota/ # Cliente Python (Remota)
 │   ├── main.py
 │   └── config.py
 ├── scripts/ # Backup & validação
