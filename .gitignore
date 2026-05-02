@@ -1,0 +1,7 @@
+__pycache__/
+*.log
+tunnel-server
+*.pem
+*.key
+.env
+*.exe
