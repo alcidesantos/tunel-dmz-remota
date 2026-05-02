@@ -70,19 +70,19 @@ python3 main.py
 ```
 ✅ Nota: Ambas as partes usam apenas a stdlib. Sem dependências externas.
 
-### 🔧 Configuração
+## 🔧 Configuração
 
 | Ficheiro             | Parâmetros Chave                        | Descrição                                         |
 | ---------------------| ----------------------------------------|---------------------------------------------------|
 | src/dmz/config.go    | ListenAddress, ServerPort, AuthToken    |IP/porto de escuta, token de auth, portos de proxy |
 | src/remota/config.py | HOST, PORT, AUTH_TOKEN, WEB_SERVER_PORT |IP da DMZ, porto do túnel, destino do proxy HTTP   |
 
-###🧪 Validação Imediata
-# Testar SSH através do túnel
+## 🧪 Validação Imediata
+### Testar SSH através do túnel
 ```
 ssh utilizador@<DMZ_IP> -p 2222
 ```
-# Testar HTTP através do túnel
+### Testar HTTP através do túnel
 ```
 curl -H "Connection: close" -s http://<DMZ_IP>:8888
 ```
