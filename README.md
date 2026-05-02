@@ -78,15 +78,15 @@ python3 main.py
 | src/remota/config.py | HOST, PORT, AUTH_TOKEN, WEB_SERVER_PORT |IP da DMZ, porto do túnel, destino do proxy HTTP   |
 
 ## 🧪 Validação Imediata
-### Testar SSH através do túnel
+#### Testar SSH através do túnel
 ```
 ssh utilizador@<DMZ_IP> -p 2222
 ```
-### Testar HTTP através do túnel
+#### Testar HTTP através do túnel
 ```
 curl -H "Connection: close" -s http://<DMZ_IP>:8888
 ```
-# Verificar logs
+#### Verificar logs
 ```
 journalctl -u tunnel-dmz.service -f  # DMZ
 tail -f ~/projeto-tunel/remota.log   # Remota
