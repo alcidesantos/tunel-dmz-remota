@@ -36,7 +36,7 @@ Auth por Token + Keepalive + Heartbeat Adaptativo
 ---
 
 ## 📁 Estrutura do Repositório
-
+```
 ├── src/
 │ ├── dmz/ # Servidor Go (DMZ)
 │ │ ├── main.go
@@ -49,7 +49,7 @@ Auth por Token + Keepalive + Heartbeat Adaptativo
 ├── scripts/ # Backup & validação
 ├── .gitignore
 └── README.md
-
+```
 
 ---
 
