@@ -70,16 +70,12 @@ python3 main.py
 ```
 ✅ Nota: Ambas as partes usam apenas a stdlib. Sem dependências externas.
 
-🔧 Configuração
-Ficheiro
-Parâmetros Chave
-Descrição
-src/dmz/config.go
-ListenAddress, ServerPort, AuthToken
-IP/porto de escuta, token de auth, portos de proxy
-src/remota/config.py
-HOST, PORT, AUTH_TOKEN, WEB_SERVER_PORT
-IP da DMZ, porto do túnel, destino do proxy HTTP
+### 🔧 Configuração
+
+| Ficheiro             | Parâmetros Chave                        | Descrição                                         |
+| ---------------------| ----------------------------------------|---------------------------------------------------|
+| src/dmz/config.go    | ListenAddress, ServerPort, AuthToken    |IP/porto de escuta, token de auth, portos de proxy |
+| src/remota/config.py | HOST, PORT, AUTH_TOKEN, WEB_SERVER_PORT |IP da DMZ, porto do túnel, destino do proxy HTTP   |
 
 🧪 Validação Imediata
 # Testar SSH através do túnel
