@@ -92,7 +92,7 @@ journalctl -u tunnel-dmz.service -f  # DMZ
 tail -f ~/projeto-tunel/remota.log   # Remota
 ```
 ## 🛡️ Segurança & Limitações
-- **🔐 Autenticação:** Handshake por token partilhado (MSG_AUTH). Previne ligações não autorizadas e relay abuse.
+**🔐 Autenticação:** Handshake por token partilhado (MSG_AUTH). Previne ligações não autorizadas e relay abuse.
 ##### 🌐 Confidencialidade: 
 O tráfego SSH viaja cifrado nativamente. O HTTP e controlo viajam em texto puro no túnel. Para produção, recomenda-se TLS 1.3 ou migração para mTLS/WireGuard.
 ##### 🚧 Escopo Académico: 
