@@ -91,10 +91,10 @@ curl -H "Connection: close" -s http://<DMZ_IP>:8888
 journalctl -u tunnel-dmz.service -f  # DMZ
 tail -f ~/projeto-tunel/remota.log   # Remota
 ```
-### 🛡️ Segurança & Limitações
-🔐 Autenticação: Handshake por token partilhado (MSG_AUTH). Previne ligações não autorizadas e relay abuse.
-🌐 Confidencialidade: O tráfego SSH viaja cifrado nativamente. O HTTP e controlo viajam em texto puro no túnel. Para produção, recomenda-se TLS 1.3 ou migração para mTLS/WireGuard.
-🚧 Escopo Académico: O projeto prioriza resiliência de transporte e gestão de ciclo de vida. A arquitetura está preparada para evolução para Session Broker + Gateway Local (APP_S) conforme descrito no relatório técnico.
+## 🛡️ Segurança & Limitações
+##### 🔐 Autenticação: Handshake por token partilhado (MSG_AUTH). Previne ligações não autorizadas e relay abuse.
+##### 🌐 Confidencialidade: O tráfego SSH viaja cifrado nativamente. O HTTP e controlo viajam em texto puro no túnel. Para produção, recomenda-se TLS 1.3 ou migração para mTLS/WireGuard.
+##### 🚧 Escopo Académico: O projeto prioriza resiliência de transporte e gestão de ciclo de vida. A arquitetura está preparada para evolução para Session Broker + Gateway Local (APP_S) conforme descrito no relatório técnico.
 
 📈 Evolução Futura
 Session Broker Dinâmico: Alocação ephemeral de portos/canais por sessão.
