@@ -100,10 +100,14 @@ O tráfego SSH viaja cifrado nativamente. O HTTP e controlo viajam em texto puro
 O projeto prioriza resiliência de transporte e gestão de ciclo de vida. A arquitetura está preparada para evolução para Session Broker + Gateway Local (APP_S) conforme descrito no relatório técnico.
 
 ## 📈 Evolução Futura
-Session Broker Dinâmico: Alocação ephemeral de portos/canais por sessão.
-Zero-Trust Access: DMZ deixa de expor portos publicamente; acesso mediado por validação JWT/mTLS.
-Client-Side Gateway (APP_S): Posto de SUPORTE instala um proxy local que estabelece túnel seguro para a DMZ e abre portos efémeros locais.
-Encriptação de Transporte: Integração de TLS 1.3 ou ChaCha20-Poly1305 a nível de aplicação.
+##### Session Broker Dinâmico: 
+Alocação ephemeral de portos/canais por sessão.
+##### Zero-Trust Access: 
+DMZ deixa de expor portos publicamente; acesso mediado por validação JWT/mTLS.
+##### Client-Side Gateway (APP_S): 
+Posto de SUPORTE instala um proxy local que estabelece túnel seguro para a DMZ e abre portos efémeros locais.
+##### Encriptação de Transporte: 
+Integração de TLS 1.3 ou ChaCha20-Poly1305 a nível de aplicação.
 📄 Licença
 Distribuído sob a licença MIT. Ver LICENSE para detalhes.
 💡 Desenvolvido para fins académicos e prototipagem. Testa em ambiente controlado antes de deploy em produção.
